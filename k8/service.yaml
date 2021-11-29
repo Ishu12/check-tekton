@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: pipelines-helloworld-tekton
+  name: pipelines-helloworld-tekton-service
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 9000
+      targetPort: 9000
+  selector:
+    app: pipelines-helloworld-tekton
